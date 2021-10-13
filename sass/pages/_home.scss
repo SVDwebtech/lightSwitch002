@@ -1,10 +1,20 @@
-h1 {
-	color: #fff;
-	text-align: center;
-	text-transform: uppercase;
+.header {
 	background-color: black;
+	padding: 30px;
+}
+h1,
+p {
+	color: rgb(226, 221, 221);
+	text-align: center;
+}
 
-	padding: 50px;
+h1 {
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+p {
+	font-size: 16px;
 }
 
 .room {
