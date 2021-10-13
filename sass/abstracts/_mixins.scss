@@ -1,0 +1,81 @@
+// to make background color for text visible
+@mixin backgroundTextTransparent {
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+// use absCenter to center a block level element
+@mixin absCenter {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+// MEDIA QUERY MANAGER
+/*
+0px			- 		300px:			Phone300
+
+0px  		-		500px:			Phone Small
+500px		- 		600px:			Phone
+600px		-		750px:			Tablet Portrait 2
+750px		- 		900px: 			Tablet Portrait 
+900px		-		1200px:			Tablet Landscape
+1200px		-		1800px:			Desktop First Approach (is where our 
+									normal styles apply)
+900px +								Tablet Portrait and bigger
+1800px +							Big Desktop
+
+@mixin respond-phone {
+	@media (max-width: 600px) { @content};
+}
+
+$breakpoint argument choices
+	- phone300 and <
+	- phone small and <
+	- phone and <
+	- tablet-portrait-2 and <
+	- tablet-portrait and <
+	- tablet-landscape and <
+	- tablet-portrait and >
+	- big-desktop and >
+
+ORDER: base + typography > general layout + grid > page layout > components
+*/
+@mixin respond($breakpoint) {
+	///////////////////////////////////////////////////////////////////////////
+	// phone breakpoint
+	@if $breakpoint == phone600 {
+		// 600px (600/16 = 37.5)                 REMEMBER: 1em = 16px;
+		@media (max-width: 37.5em) {
+			@content;
+		}
+	}
+	///////////////////////////////////////////////////////////////////////////
+	// tablet portrait breakpoint
+	@if $breakpoint == tablet-portrait {
+		// 900px (900/16 = 56.25)
+		@media (max-width: 56.25em) {
+			@content;
+		}
+	}
+	///////////////////////////////////////////////////////////////////////////
+	// tablet landscape breakpoint
+	@if $breakpoint == tablet-landscape {
+		// 1200px (1200/16 = 75)
+		@media (max-width: 75em) {
+			@content;
+		}
+	}
+	///////////////////////////////////////////////////////////////////////////
+	// big desktop breakpoint
+	@if $breakpoint == big-desktop {
+		// 1800px (1800/16 = 112.5)
+		@media (min-width: 112.5em) {
+			@content;
+		}
+	}
+	///////////////////////////////////////////////////////////////////////////
+}

@@ -1,5 +1,146 @@
+/*
+0px			- 		300px:			Phone300
+
+0px  		-		500px:			Phone Small
+500px		- 		600px:			Phone
+600px		-		750px:			Tablet Portrait 2
+750px		- 		900px: 			Tablet Portrait 
+900px		-		1200px:			Tablet Landscape
+1200px		-		1800px:			Desktop First Approach (is where our 
+									normal styles apply)
+900px +								Tablet Portrait and bigger
+1800px +							Big Desktop
+
+@mixin respond-phone {
+	@media (max-width: 600px) { @content};
+}
+
+$breakpoint argument choices
+	- phone300 and <
+	- phone small and <
+	- phone and <
+	- tablet-portrait-2 and <
+	- tablet-portrait and <
+	- tablet-landscape and <
+	- tablet-portrait and >
+	- big-desktop and >
+
+ORDER: base + typography > general layout + grid > page layout > components
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* 	1rem is equal to 10px */
+  /* 	because 10px / 10 is equal to 1rem */
+  /* 	therefore 30px is equal to 3rem */
+  /* 	the default font size of the browser is 16px */
+  /* 	10px / 16px *100 = 62.5% */
+  font-size: 62.5%;
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media (max-width: 37.5em) {
+  html {
+    font-size: 51.56%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
 body {
-  background-color: yellowgreen;
+  /* This makes dealing with the sizes of elements much easier, 
+  	and generally eliminates a number of pitfalls you can stumble on
+  	 while laying out your content. */
+  /* The width and height properties include the content, padding, and border, 
+  	but do not include the margin.  Note that padding and border will be inside 
+  	of the box. */
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: black;
+  padding: 50px;
+}
+
+.room {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightsteelblue;
+  min-height: 95vh;
+  position: relative;
+}
+
+.switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  border-radius: 5px;
+  width: 60px;
+  height: 90px;
+  position: absolute;
+  bottom: 30vh;
+  left: 10vw;
+}
+.switch__toggleswitch {
+  width: 15px;
+  height: 35px;
+}
+.switch__toggleswitch--on {
+  background-color: #636e79;
+  height: 17.5px;
+}
+.switch__toggleswitch--off {
+  background-color: #55616d;
+  height: 17.5px;
+}
+
+.lightbulb {
+  background-color: black;
+  min-width: 100px;
+  min-height: 50px;
+  position: absolute;
+  top: 0;
+  left: 650px;
+}
+.lightbulb__cord {
+  background-color: #070808;
+  max-width: 5px;
+  min-height: 20vh;
+}
+.lightbulb__shade {
+  background-color: #223b3b;
+  min-height: 10vh;
+}
+.lightbulb__bulb {
+  background-color: #c4e217;
+  min-height: 10vh;
+}
+
+.lightSwitchColorToggle {
+  background-color: red;
 }
 
 /*# sourceMappingURL=styles.css.map */

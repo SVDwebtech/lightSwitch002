@@ -1,6 +1,6 @@
-const button = document.querySelector("button");
-const h1 = document.querySelector("h1");
+const button = document.querySelector(".switch");
+const bulb = document.querySelector(".bulb");
 
 button.addEventListener("click", () => {
-	document.body.classList.toggle("switch");
+	bulb.classList.toggle("lightSwitchColorToggle");
 });

@@ -1,0 +1,81 @@
+h1 {
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: black;
+
+	padding: 50px;
+}
+
+.room {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-color: lightsteelblue;
+	min-height: 95vh;
+
+	position: relative;
+}
+
+.switch {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-color: grey;
+	border-radius: 5px;
+	width: 60px;
+	height: 90px;
+
+	position: absolute;
+	bottom: 30vh;
+	left: 10vw;
+
+	&__toggleswitch {
+		width: 15px;
+		height: 35px;
+
+		&--on {
+			background-color: rgb(99, 110, 121);
+			height: 17.5px;
+		}
+
+		&--off {
+			background-color: rgb(85, 97, 109);
+			height: 17.5px;
+		}
+	}
+}
+
+.lightbulb {
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: center;
+
+	background-color: black;
+	min-width: 100px;
+	min-height: 50px;
+
+	position: absolute;
+	top: 0;
+	left: 650px;
+
+	&__cord {
+		background-color: rgb(7, 8, 8);
+		max-width: 5px;
+		min-height: 20vh;
+	}
+	&__shade {
+		background-color: rgb(34, 59, 59);
+		min-height: 10vh;
+	}
+	&__bulb {
+		background-color: rgb(196, 226, 23);
+		min-height: 10vh;
+	}
+}
+
+.lightSwitchColorToggle {
+	background-color: red;
+}
