@@ -149,7 +149,9 @@ p {
   clip-path: polygon(0 0, 0 100%, 45% 0, 57% 0, 100% 100%, 0 100%);
 }
 .lightbulb__bulb {
-  background-color: #c4e217;
+  background-color: rgba(255, 255, 255, 0.644);
+  border: 2px solid gray;
+  border-top: none;
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   width: 35px;
@@ -157,7 +159,8 @@ p {
 }
 
 .lightSwitchColorToggle {
-  background-color: red;
+  background-color: #ffc400;
+  box-shadow: 0px 10px 10px white, 15px 10px 20px white, -15px 10px 20px white, 10px 15px 20px white, -10px 15px 20px white, 0px 20px 20px white;
 }
 
 /*# sourceMappingURL=styles.css.map */

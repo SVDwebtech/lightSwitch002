@@ -79,14 +79,22 @@ p {
 		clip-path: polygon(0 0, 0 100%, 45% 0, 57% 0, 100% 100%, 0 100%);
 	}
 	&__bulb {
-		background-color: rgb(196, 226, 23);
+		background-color: rgba(255, 255, 255, 0.644);
+		border: 2px solid gray;
+		border-top: none;
 		border-bottom-left-radius: 50%;
 		border-bottom-right-radius: 50%;
+		// box-shadow: 5px 15px 20px rgb(255, 255, 255);
+		// box-shadow: -5px 15px 20px rgb(255, 255, 255);
 		width: 35px;
 		min-height: 5vh;
 	}
 }
 
 .lightSwitchColorToggle {
-	background-color: red;
+	// background-color: rgb(255, 196, 0);
+	// box-shadow: 0px 10px 10px rgb(255, 255, 255),
+	// 	15px 10px 20px rgb(255, 255, 255), -15px 10px 20px rgb(255, 255, 255),
+	// 	10px 15px 20px rgb(255, 255, 255), -10px 15px 20px rgb(255, 255, 255),
+	// 	0px 20px 20px rgb(255, 255, 255);
 }
