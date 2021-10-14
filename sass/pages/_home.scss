@@ -59,13 +59,9 @@ p {
 }
 
 .lightbulb {
-	// display: flex;
-	// flex-direction: column;
-	// justify-content: center;
-
-	background-color: black;
-	min-width: 100px;
-	min-height: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
 	position: absolute;
 	top: 0;
@@ -73,16 +69,21 @@ p {
 
 	&__cord {
 		background-color: rgb(7, 8, 8);
-		max-width: 5px;
+		width: 5px;
 		min-height: 20vh;
 	}
 	&__shade {
 		background-color: rgb(34, 59, 59);
+		width: 100px;
 		min-height: 10vh;
+		clip-path: polygon(0 0, 0 100%, 45% 0, 57% 0, 100% 100%, 0 100%);
 	}
 	&__bulb {
 		background-color: rgb(196, 226, 23);
-		min-height: 10vh;
+		border-bottom-left-radius: 50%;
+		border-bottom-right-radius: 50%;
+		width: 35px;
+		min-height: 5vh;
 	}
 }
 

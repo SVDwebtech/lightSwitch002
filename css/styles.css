@@ -130,25 +130,30 @@ p {
 }
 
 .lightbulb {
-  background-color: black;
-  min-width: 100px;
-  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 45%;
 }
 .lightbulb__cord {
   background-color: #070808;
-  max-width: 5px;
+  width: 5px;
   min-height: 20vh;
 }
 .lightbulb__shade {
   background-color: #223b3b;
+  width: 100px;
   min-height: 10vh;
+  clip-path: polygon(0 0, 0 100%, 45% 0, 57% 0, 100% 100%, 0 100%);
 }
 .lightbulb__bulb {
   background-color: #c4e217;
-  min-height: 10vh;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  width: 35px;
+  min-height: 5vh;
 }
 
 .lightSwitchColorToggle {
