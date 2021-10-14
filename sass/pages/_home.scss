@@ -23,6 +23,7 @@ p {
 	align-items: center;
 
 	background-color: rgb(188, 151, 236);
+
 	min-height: 95vh;
 
 	position: relative;
@@ -97,4 +98,13 @@ p {
 		15px 10px 20px rgb(255, 255, 255), -15px 10px 20px rgb(255, 255, 255),
 		10px 15px 20px rgb(255, 255, 255), -10px 15px 20px rgb(255, 255, 255),
 		0px 20px 20px rgb(255, 255, 255);
+}
+
+.darkRoomColorToggle {
+	background-image: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0.911) 10%,
+		rgba(0, 0, 0, 0.493) 80%
+	);
+	background-size: cover;
 }
