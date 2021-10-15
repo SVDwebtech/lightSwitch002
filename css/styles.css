@@ -78,18 +78,22 @@ p {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
 
 p {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: black;
-  padding: 30px;
+  padding: 2.5rem;
+  min-height: 15vh;
 }
 
 .room {
@@ -97,7 +101,7 @@ p {
   justify-content: center;
   align-items: center;
   background-color: #bc97ec;
-  min-height: 95vh;
+  min-height: 85vh;
   position: relative;
 }
 
