@@ -122,10 +122,18 @@ p {
 }
 .switch__toggleswitch--on {
   background-color: #636e79;
+  border-top: 1px solid rgba(138, 138, 138, 0.918);
+  border-bottom: 1px solid rgba(95, 95, 95, 0.918);
+  border-right: 1px solid rgba(95, 95, 95, 0.918);
+  border-left: 1px solid rgba(160, 160, 160, 0.918);
   height: 17.5px;
 }
 .switch__toggleswitch--off {
   background-color: #55616d;
+  border-top: 1px solid rgba(95, 95, 95, 0.918);
+  border-bottom: 1px solid rgba(160, 160, 160, 0.918);
+  border-right: 1px solid rgba(95, 95, 95, 0.918);
+  border-left: 1px solid rgba(160, 160, 160, 0.918);
   height: 17.5px;
 }
 

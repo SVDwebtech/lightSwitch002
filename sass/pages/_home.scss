@@ -49,11 +49,19 @@ p {
 
 		&--on {
 			background-color: rgb(99, 110, 121);
+			border-top: 1px solid $border-color-notFlippedTopOrBottom;
+			border-bottom: 1px solid $border-color-standard;
+			border-right: 1px solid $border-color-standard;
+			border-left: 1px solid $border-color-notFlippedLeftOrRight;
 			height: 17.5px;
 		}
 
 		&--off {
 			background-color: rgb(85, 97, 109);
+			border-top: 1px solid $border-color-standard;
+			border-bottom: 1px solid $border-color-notFlippedLeftOrRight;
+			border-right: 1px solid $border-color-standard;
+			border-left: 1px solid $border-color-notFlippedLeftOrRight;
 			height: 17.5px;
 		}
 	}
