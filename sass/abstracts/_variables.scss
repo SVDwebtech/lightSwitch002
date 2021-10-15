@@ -1,4 +1,25 @@
-// switch border colors
-$border-color-notFlippedLeftOrRight: rgba(160, 160, 160, 0.918);
-$border-color-notFlippedTopOrBottom: rgba(138, 138, 138, 0.918);
-$border-color-standard: rgba(95, 95, 95, 0.918);
+// header color
+$color-background-header: rgb(18, 19, 19);
+
+// font color
+$color-font-header: rgba(255, 255, 255, 0.644);
+
+// room wall color
+$color-background-wall: rgb(188, 151, 236);
+
+// switch color
+$color-background-switch: grey;
+$color-background-switchONandOFF: rgba(13, 13, 13, .2);
+
+$color-border-LeftOrRight: rgba(160, 160, 160, 0.918);
+$color-border-TopOrBottom: rgba(138, 138, 138, 0.918);
+
+// light color
+$color-background-light-cord: rgb(7, 8, 8);
+$color-background-lampshade: rgb(34, 59, 59);
+$color-background-lightbulb-off: rgba(255, 255, 255, 0.644);
+$color-background-lightbulb-on: rgb(255, 196, 0);
+$color-border-lightbulb: gray;
+
+// border radius
+$border-radius-switch: .5rem;

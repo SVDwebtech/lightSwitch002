@@ -16,13 +16,9 @@
 }
 
 $breakpoint argument choices
-	- phone300 and <
-	- phone small and <
-	- phone and <
-	- tablet-portrait-2 and <
+	- phone600 and <
 	- tablet-portrait and <
 	- tablet-landscape and <
-	- tablet-portrait and >
 	- big-desktop and >
 
 ORDER: base + typography > general layout + grid > page layout > components
@@ -51,12 +47,12 @@ html {
 }
 @media (max-width: 56.25em) {
   html {
-    font-size: 62.5%;
+    font-size: 50%;
   }
 }
 @media (max-width: 37.5em) {
   html {
-    font-size: 51.56%;
+    font-size: 43.75%;
   }
 }
 @media (min-width: 112.5em) {
@@ -75,24 +71,25 @@ body {
   box-sizing: border-box;
 }
 
-.header {
-  background-color: black;
-  padding: 30px;
-}
-
 h1,
 p {
-  color: #e2dddd;
+  color: rgba(255, 255, 255, 0.644);
   text-align: center;
 }
 
 h1 {
+  font-size: 2rem;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 p {
-  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+.header {
+  background-color: black;
+  padding: 30px;
 }
 
 .room {
@@ -109,31 +106,31 @@ p {
   justify-content: center;
   align-items: center;
   background-color: grey;
-  border-radius: 5px;
-  width: 60px;
-  height: 90px;
+  border-radius: 0.5rem;
+  width: 6rem;
+  height: 9rem;
   position: absolute;
   bottom: 30vh;
   left: 10vw;
 }
 .switch__toggleswitch {
-  width: 15px;
-  height: 35px;
+  width: 1.5rem;
+  height: 3.5rem;
 }
 .switch__toggleswitch--on {
   background-color: rgba(13, 13, 13, 0.2);
   border-top: 2px solid rgba(138, 138, 138, 0.918);
   border-right: 2px solid rgba(160, 160, 160, 0.918);
   border-left: 2px solid rgba(160, 160, 160, 0.918);
-  height: 14px;
+  height: 1.4rem;
   clip-path: polygon(5% 70%, 0 0, 100% 0, 95% 70%, 95% 100%, 5% 100%);
 }
 .switch__toggleswitch--off {
   background-color: rgba(13, 13, 13, 0.2);
-  border-bottom: 2px solid rgba(160, 160, 160, 0.918);
+  border-bottom: 2px solid rgba(138, 138, 138, 0.918);
   border-right: 2px solid rgba(160, 160, 160, 0.918);
   border-left: 2px solid rgba(160, 160, 160, 0.918);
-  height: 14px;
+  height: 1.4rem;
   clip-path: polygon(0 0, 0 100%, 5% 30%, 5% 0, 95% 0, 95% 30%, 100% 100%, 0 100%);
 }
 
@@ -147,12 +144,12 @@ p {
 }
 .lightbulb__cord {
   background-color: #070808;
-  width: 5px;
+  width: 0.5rem;
   min-height: 20vh;
 }
 .lightbulb__shade {
   background-color: #223b3b;
-  width: 100px;
+  width: 10rem;
   min-height: 10vh;
   clip-path: polygon(0 0, 0 100%, 45% 0, 57% 0, 100% 100%, 0 100%);
 }
@@ -162,7 +159,7 @@ p {
   border-top: none;
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
-  width: 35px;
+  width: 3.5rem;
   min-height: 5vh;
 }
 

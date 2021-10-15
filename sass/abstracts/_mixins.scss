@@ -1,11 +1,3 @@
-// to make background color for text visible
-@mixin backgroundTextTransparent {
-	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	background-clip: text;
-	color: transparent;
-}
-
 // use absCenter to center a block level element
 @mixin absCenter {
 	position: absolute;
@@ -33,13 +25,9 @@
 }
 
 $breakpoint argument choices
-	- phone300 and <
-	- phone small and <
-	- phone and <
-	- tablet-portrait-2 and <
+	- phone600 and <
 	- tablet-portrait and <
 	- tablet-landscape and <
-	- tablet-portrait and >
 	- big-desktop and >
 
 ORDER: base + typography > general layout + grid > page layout > components

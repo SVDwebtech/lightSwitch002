@@ -2,107 +2,52 @@
 	background-color: black;
 	padding: 30px;
 }
-h1,
-p {
-	color: rgb(226, 221, 221);
-	text-align: center;
-}
-
-h1 {
-	text-transform: uppercase;
-	margin-bottom: 10px;
-}
-
-p {
-	font-size: 16px;
-}
-
 .room {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 
-	background-color: rgb(188, 151, 236);
+	background-color: $color-background-wall;
 
 	min-height: 95vh;
 
 	position: relative;
 }
-
 .switch {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 
-	background-color: grey;
-	border-radius: 5px;
-	width: 60px;
-	height: 90px;
+	background-color: $color-background-switch;
+	border-radius: $border-radius-switch;
+	width: 6rem;
+	height: 9rem;
 
 	position: absolute;
 	bottom: 30vh;
 	left: 10vw;
 
 	&__toggleswitch {
-		width: 15px;
-		height: 35px;
+		width: 1.5rem;
+		height: 3.5rem;
 
 		&--on {
-			background-color: rgba(13, 13, 13, .2);
+			background-color: $color-background-switchONandOFF;
 
-			// background: linear-gradient(
-			// 	to top,
-			// 	rgba(13, 13, 13, .5) 0%,
-			// 	rgba(13, 13, 13, .2) 50%
-			// );
-
-			border-top: 2px solid $border-color-notFlippedTopOrBottom;
-			border-right: 2px solid $border-color-notFlippedLeftOrRight;
-			border-left: 2px solid $border-color-notFlippedLeftOrRight;
-			height: 14px;
+			border-top: 2px solid $color-border-TopOrBottom;
+			border-right: 2px solid $color-border-LeftOrRight;
+			border-left: 2px solid $color-border-LeftOrRight;
+			height: 1.4rem;
 
 			clip-path: polygon(5% 70%, 0 0, 100% 0, 95% 70%, 95% 100%, 5% 100%);
-
-			// &::after {
-			// content: "";
-			// display: inline-block;
-			// width: 100%;
-			// height: 100%;
-
-			// background-color: rgb(85, 97, 109);
-			// border-top: 3px solid $border-color-notFlippedTopOrBottom;
-			// border-bottom: 3px solid $border-color-standard;
-			// border-right: 3px solid $border-color-standard;
-
-			// border-left: 3px solid $border-color-notFlippedLeftOrRight;
-			// position: absolute;
-			// top: 0;
-			// left: 0;
-			// z-index: 1000;
-			// // clip-path: polygon(
-			// // 	0 0,
-			// // 	0 100%,
-			// // 	10% 5%,
-			// // 	90% 5%,
-			// // 	100% 100%,
-			// // 	0 100%
-			// // );
-			// }
 		}
 		&--off {
-			background-color: rgba(13, 13, 13, .2);
+			background-color: $color-background-switchONandOFF;
 
-			// background: linear-gradient(
-			// 	to bottom,
-			// 	rgba(13, 13, 13, .5) 0%,
-			// 	rgba(13, 13, 13, .2) 50%
-			// );
-
-			// border-top: 1px solid $border-color-standard;
-			border-bottom: 2px solid $border-color-notFlippedLeftOrRight;
-			border-right: 2px solid $border-color-notFlippedLeftOrRight;
-			border-left: 2px solid $border-color-notFlippedLeftOrRight;
-			height: 14px;
+			border-bottom: 2px solid $color-border-TopOrBottom;
+			border-right: 2px solid $color-border-LeftOrRight;
+			border-left: 2px solid $color-border-LeftOrRight;
+			height: 1.4rem;
 
 			clip-path: polygon(
 				0 0,
@@ -125,28 +70,28 @@ p {
 	top: 0;
 	left: 45%;
 	&__cord {
-		background-color: rgb(7, 8, 8);
-		width: 5px;
+		background-color: $color-background-light-cord;
+		width: .5rem;
 		min-height: 20vh;
 	}
 	&__shade {
-		background-color: rgb(34, 59, 59);
-		width: 100px;
+		background-color: $color-background-lampshade;
+		width: 10rem;
 		min-height: 10vh;
 		clip-path: polygon(0 0, 0 100%, 45% 0, 57% 0, 100% 100%, 0 100%);
 	}
 	&__bulb {
-		background-color: rgba(255, 255, 255, 0.644);
-		border: 2px solid gray;
+		background-color: $color-background-lightbulb-off;
+		border: 2px solid $color-border-lightbulb;
 		border-top: none;
 		border-bottom-left-radius: 50%;
-		border-bottom-right-radius: 50%; // box-shadow: 5px 15px 20px rgb(255, 255, 255); // box-shadow: -5px 15px 20px rgb(255, 255, 255);
-		width: 35px;
+		border-bottom-right-radius: 50%;
+		width: 3.5rem;
 		min-height: 5vh;
 	}
 }
 .lightSwitchColorToggle {
-	background-color: rgb(255, 196, 0);
+	background-color: $color-background-lightbulb-on;
 	box-shadow: 0px 10px 10px rgb(255, 255, 255),
 		15px 10px 20px rgb(255, 255, 255), -15px 10px 20px rgb(255, 255, 255),
 		10px 15px 20px rgb(255, 255, 255), -10px 15px 20px rgb(255, 255, 255),
