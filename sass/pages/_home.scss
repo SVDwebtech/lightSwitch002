@@ -48,34 +48,82 @@ p {
 		height: 35px;
 
 		&--on {
-			background-color: rgb(99, 110, 121);
-			border-top: 1px solid $border-color-notFlippedTopOrBottom;
-			border-bottom: 1px solid $border-color-standard;
-			border-right: 1px solid $border-color-standard;
-			border-left: 1px solid $border-color-notFlippedLeftOrRight;
-			height: 17.5px;
-		}
+			background-color: rgba(13, 13, 13, .2);
 
+			// background: linear-gradient(
+			// 	to top,
+			// 	rgba(13, 13, 13, .5) 0%,
+			// 	rgba(13, 13, 13, .2) 50%
+			// );
+
+			border-top: 2px solid $border-color-notFlippedTopOrBottom;
+			border-right: 2px solid $border-color-notFlippedLeftOrRight;
+			border-left: 2px solid $border-color-notFlippedLeftOrRight;
+			height: 14px;
+
+			clip-path: polygon(5% 70%, 0 0, 100% 0, 95% 70%, 95% 100%, 5% 100%);
+
+			// &::after {
+			// content: "";
+			// display: inline-block;
+			// width: 100%;
+			// height: 100%;
+
+			// background-color: rgb(85, 97, 109);
+			// border-top: 3px solid $border-color-notFlippedTopOrBottom;
+			// border-bottom: 3px solid $border-color-standard;
+			// border-right: 3px solid $border-color-standard;
+
+			// border-left: 3px solid $border-color-notFlippedLeftOrRight;
+			// position: absolute;
+			// top: 0;
+			// left: 0;
+			// z-index: 1000;
+			// // clip-path: polygon(
+			// // 	0 0,
+			// // 	0 100%,
+			// // 	10% 5%,
+			// // 	90% 5%,
+			// // 	100% 100%,
+			// // 	0 100%
+			// // );
+			// }
+		}
 		&--off {
-			background-color: rgb(85, 97, 109);
-			border-top: 1px solid $border-color-standard;
-			border-bottom: 1px solid $border-color-notFlippedLeftOrRight;
-			border-right: 1px solid $border-color-standard;
-			border-left: 1px solid $border-color-notFlippedLeftOrRight;
-			height: 17.5px;
+			background-color: rgba(13, 13, 13, .2);
+
+			// background: linear-gradient(
+			// 	to bottom,
+			// 	rgba(13, 13, 13, .5) 0%,
+			// 	rgba(13, 13, 13, .2) 50%
+			// );
+
+			// border-top: 1px solid $border-color-standard;
+			border-bottom: 2px solid $border-color-notFlippedLeftOrRight;
+			border-right: 2px solid $border-color-notFlippedLeftOrRight;
+			border-left: 2px solid $border-color-notFlippedLeftOrRight;
+			height: 14px;
+
+			clip-path: polygon(
+				0 0,
+				0 100%,
+				5% 30%,
+				5% 0,
+				95% 0,
+				95% 30%,
+				100% 100%,
+				0 100%
+			);
 		}
 	}
 }
-
 .lightbulb {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
 	position: absolute;
 	top: 0;
 	left: 45%;
-
 	&__cord {
 		background-color: rgb(7, 8, 8);
 		width: 5px;
@@ -92,14 +140,11 @@ p {
 		border: 2px solid gray;
 		border-top: none;
 		border-bottom-left-radius: 50%;
-		border-bottom-right-radius: 50%;
-		// box-shadow: 5px 15px 20px rgb(255, 255, 255);
-		// box-shadow: -5px 15px 20px rgb(255, 255, 255);
+		border-bottom-right-radius: 50%; // box-shadow: 5px 15px 20px rgb(255, 255, 255); // box-shadow: -5px 15px 20px rgb(255, 255, 255);
 		width: 35px;
 		min-height: 5vh;
 	}
 }
-
 .lightSwitchColorToggle {
 	background-color: rgb(255, 196, 0);
 	box-shadow: 0px 10px 10px rgb(255, 255, 255),
@@ -107,7 +152,6 @@ p {
 		10px 15px 20px rgb(255, 255, 255), -10px 15px 20px rgb(255, 255, 255),
 		0px 20px 20px rgb(255, 255, 255);
 }
-
 .darkRoomColorToggle {
 	background-image: linear-gradient(
 		to bottom,
@@ -115,4 +159,24 @@ p {
 		rgba(0, 0, 0, 0.493) 80%
 	);
 	background-size: cover;
+}
+.lightSwitchToggleONBtnColor {
+	background: linear-gradient(
+		to bottom,
+		rgba(13, 13, 13, .5) 30%,
+		rgba(13, 13, 13, .2) 80%
+	);
+}
+.lightSwitchToggleOFFBtnColor {
+	background: linear-gradient(
+		to top,
+		rgba(13, 13, 13, .5) 30%,
+		rgba(13, 13, 13, .2)80%
+	);
+}
+.switchOn-clip {
+	clip-path: polygon(5% 70%, 10% 5%, 90% 5%, 95% 70%, 95% 100%, 5% 100%);
+}
+.switchOff-clip {
+	clip-path: polygon(5% 0, 95% 0, 95% 30%, 90% 95%, 10% 95%);
 }
